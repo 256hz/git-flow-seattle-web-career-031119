@@ -69,7 +69,7 @@ describe "GIT" do
   it "10. Locally you have a master branch, remotely there is a master & add-nav-bar branch.
       You run 'git fetch --all'. 
       What command would you need to run to view and change 'add-nav-bar' branch locally?" do
-    answer = "git checkout -b add-nav-bar"
+    answer = "git checkout add-nav-bar"
     encoded_answer = "a510904cdd46be19a468be297076084d2ec5a5cf"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -109,7 +109,7 @@ describe "GIT" do
 
 # describe "BRANCHING:" do
   it "15. What is the syntax for creating a new branch called 'style-image'?" do
-    answer = "git checkout -b 'style-image'"
+    answer = "git checkout -b style-image"
     encoded_answer = "a905f4cf88cdf57f8c406f2d5e7eb0acafe44c05"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -207,7 +207,7 @@ describe "GIT" do
 # describe "DELETING BRANCHES:" do
   it "27. From master, what is the syntax for deleting a local branch called 
       'add-link'?" do
-    answer = "git branch -D add-link"
+    answer = "git branch -d add-link"
     encoded_answer = "6f91ced397c25c02c099b56d71e11955ea660fa0"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -265,7 +265,7 @@ describe "GIT" do
      and one developer has pushed to your remote since you cloned it, 
      will 'git status' say you're ahead or behind (or both) origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "both"
+    answer = "ahead and behind"
     encoded_answer = "d81d22fb57ad5589d12d6363f4160b33232c3510"
     expect(encode(answer)).to eq(encoded_answer)
   end
